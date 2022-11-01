@@ -1778,6 +1778,8 @@
         }
       }
 
+      this.selectpicker.main.data = [];
+
       switch (type) {
         case 'data': {
           if (!this.selectpicker.main.data) {
@@ -2733,7 +2735,7 @@
             prevValue = getSelectValues.call(that),
             prevIndex = element.selectedIndex,
             prevOption = element.options[prevIndex],
-            prevData = prevOption ? that.selectpicker.main.data[prevOption.liIndex] : false,
+            prevData = prevOption ? that.selectpicker.main.data[prevIndex] : false,
             triggerChange = true;
 
         // Don't close on multi choice menu
